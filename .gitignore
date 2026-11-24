@@ -16,3 +16,5 @@ public/images/_gen/
 public/images/_gen-test/
 public/images/_candidates/
 *.png.tmp
+# Local git push token (never commit)
+.git-credentials

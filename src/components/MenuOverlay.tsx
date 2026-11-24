@@ -208,10 +208,9 @@ export function MenuOverlay({ open, onClose }: MenuOverlayProps) {
         </div>
 
         <div className="border-t border-line">
-          <div className="container-content flex flex-wrap items-center justify-between gap-4 py-5 text-[12px] text-ink-muted">
+          <div className="container-content flex flex-col items-center justify-between gap-4 py-5 text-[12px] text-ink-muted sm:flex-row">
             <Logo className="h-[22px]" />
-            <p>{site.address}</p>
-            <a href={`mailto:${site.email}`} className="hover:text-orange">
+            <a href={`mailto:${site.email}`} className="break-all hover:text-orange">
               {site.email}
             </a>
           </div>

@@ -41,7 +41,7 @@ export function FilterBar({ showCategories = true }: FilterBarProps) {
   return (
     <div className="space-y-5">
       {showCategories && (
-        <div className="-mx-5 flex items-center gap-2 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+        <div className="slide-row -mx-5 flex items-center gap-2 overflow-x-auto px-5 sm:mx-0 sm:px-0">
           <button
             type="button"
             onClick={() => setCategory(undefined)}

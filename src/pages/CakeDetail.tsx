@@ -78,7 +78,7 @@ export function CakeDetail() {
             <span>{category?.name}</span>
           </nav>
 
-          <div className="mt-8 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             {/* Gallery */}
             <div>
               <CakeGallery cakeKey={cake.image} name={cake.name} />
@@ -101,9 +101,11 @@ export function CakeDetail() {
                 </div>
 
                 {/* Size */}
-                <fieldset className="mt-8">
-                  <legend className="label mb-3">Size</legend>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mt-8" role="group" aria-labelledby="cake-size-label">
+                  <p id="cake-size-label" className="label mb-3">
+                    Size
+                  </p>
+                  <div className="slide-row flex items-center gap-2 overflow-x-auto pb-1">
                     {cake.sizes.map((size, i) => (
                       <button
                         key={size.label}
@@ -111,7 +113,7 @@ export function CakeDetail() {
                         onClick={() => setSizeIndex(i)}
                         aria-pressed={i === sizeIndex}
                         className={cn(
-                          'rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200',
+                          'shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200',
                           i === sizeIndex
                             ? 'border-chocolate bg-chocolate text-cream shadow-[0_8px_18px_-10px_rgba(59,36,21,0.55)]'
                             : 'border-line text-ink-muted hover:-translate-y-0.5 hover:border-chocolate/30 hover:text-chocolate',
@@ -121,12 +123,14 @@ export function CakeDetail() {
                       </button>
                     ))}
                   </div>
-                </fieldset>
+                </div>
 
                 {/* Flavor */}
-                <fieldset className="mt-6">
-                  <legend className="label mb-3">Flavor</legend>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mt-6" role="group" aria-labelledby="cake-flavor-label">
+                  <p id="cake-flavor-label" className="label mb-3">
+                    Flavor
+                  </p>
+                  <div className="slide-row flex items-center gap-2 overflow-x-auto pb-1">
                     {cake.flavors.map((f) => (
                       <button
                         key={f}
@@ -134,7 +138,7 @@ export function CakeDetail() {
                         onClick={() => setFlavor(f)}
                         aria-pressed={f === flavor}
                         className={cn(
-                          'rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200',
+                          'shrink-0 whitespace-nowrap rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200',
                           f === flavor
                             ? 'border-orange bg-orange text-cream shadow-[0_8px_18px_-10px_rgba(232,106,23,0.6)]'
                             : 'border-line text-ink-muted hover:-translate-y-0.5 hover:border-chocolate/30 hover:text-chocolate',
@@ -144,15 +148,15 @@ export function CakeDetail() {
                       </button>
                     ))}
                   </div>
-                </fieldset>
+                </div>
 
                 <div className="mt-8 flex gap-3">
                   <button
                     type="button"
                     onClick={() => openBooking(cake.slug)}
-                    className="inline-flex h-11 flex-1 items-center justify-center rounded-full bg-orange px-4 text-[13px] font-medium text-cream shadow-[0_10px_22px_-12px_rgba(232,106,23,0.75)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-deep hover:shadow-[0_16px_28px_-12px_rgba(232,106,23,0.85)] active:translate-y-0 active:scale-[0.97] md:btn-primary md:h-12 md:flex-none md:px-6 md:text-[14px]"
+                    className="inline-flex h-11 shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-orange px-4 text-[13px] font-medium text-cream shadow-[0_10px_22px_-12px_rgba(232,106,23,0.75)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-deep hover:shadow-[0_16px_28px_-12px_rgba(232,106,23,0.85)] active:translate-y-0 active:scale-[0.97] md:btn-primary md:h-12 md:px-6 md:text-[14px]"
                   >
-                    Book this cake
+                    Book cake
                   </button>
                   <a
                     href={whatsappLink(
@@ -160,9 +164,9 @@ export function CakeDetail() {
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full border border-chocolate/25 px-4 text-[13px] font-medium text-chocolate transition-all duration-200 hover:-translate-y-0.5 hover:border-chocolate hover:bg-chocolate hover:text-cream hover:shadow-[0_16px_30px_-18px_rgba(59,36,21,0.7)] active:translate-y-0 active:scale-[0.97] md:btn-secondary md:h-12 md:flex-none md:px-6 md:text-[14px]"
+                    className="inline-flex h-11 flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-chocolate/25 px-4 text-[13px] font-medium text-chocolate transition-all duration-200 hover:-translate-y-0.5 hover:border-chocolate hover:bg-chocolate hover:text-cream hover:shadow-[0_16px_30px_-18px_rgba(59,36,21,0.7)] active:translate-y-0 active:scale-[0.97] md:btn-secondary md:h-12 md:flex-none md:px-6 md:text-[14px]"
                   >
-                    <WhatsAppIcon className="size-4" />
+                    <WhatsAppIcon className="size-4 shrink-0" />
                     <span>Ask on WhatsApp</span>
                   </a>
                 </div>

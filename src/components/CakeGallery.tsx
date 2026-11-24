@@ -88,7 +88,7 @@ export function CakeGallery({ cakeKey, name }: CakeGalleryProps) {
         </span>
       </button>
 
-      <div className="mt-4 flex flex-wrap gap-2" role="list" aria-label={`${name} photos`}>
+      <div className="slide-row mt-4 flex flex-wrap gap-2" role="list" aria-label={`${name} photos`}>
         {photos.map((src, i) => (
           <button
             key={src}
@@ -119,10 +119,6 @@ export function CakeGallery({ cakeKey, name }: CakeGalleryProps) {
           </button>
         ))}
       </div>
-
-      <p className="mt-3 text-[11px] uppercase tracking-[0.16em] text-sage">
-        Tap a photo to enlarge · every cake is finished by hand
-      </p>
 
       {lightbox && (
         <div

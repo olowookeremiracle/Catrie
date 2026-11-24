@@ -1,0 +1,18 @@
+node_modules
+dist
+dist-ssr
+.env
+.env.*
+!.env.example
+.DS_Store
+*.local
+npm-debug.log*
+yarn-error.log*
+
+# Image drop folder (user uploads raw photos here before processing)
+public/images/uploads/
+# Raw generation intermediates / previews
+public/images/_gen/
+public/images/_gen-test/
+public/images/_candidates/
+*.png.tmp

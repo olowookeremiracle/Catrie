@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Catrie — Final Logo</title>
+<link rel="stylesheet" href="./fonts/fonts.css" />
+<style>
+  :root{
+    --cream:#FFF7EC;
+    --orange:#E86A17;
+    --chocolate:#3B2415;
+    --chocolate-deep:#2A1810;
+    --sage:#7C8A6B;
+    --line:rgba(59,36,21,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:
+      radial-gradient(1100px 560px at 10% -10%, #FFFDF8 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, #FBEBD9 0%, transparent 55%),
+      var(--cream);
+    color:var(--chocolate);
+    font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:52px clamp(18px,5vw,72px) 90px;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+  .eyebrow{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--sage);font-weight:600;margin:0 0 10px}
+  h1{font-size:clamp(24px,3vw,34px);font-weight:500;letter-spacing:-.01em;margin:0 0 8px;color:var(--chocolate-deep)}
+  .lede{color:rgba(59,36,21,.7);font-size:15px;line-height:1.65;margin:0;max-width:62ch}
+  .rule{height:1px;background:var(--line);margin:34px 0}
+  h2{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:rgba(59,36,21,.5);margin:0 0 16px}
+
+  /* ---- wordmark ---- */
+  .lockup{display:inline-flex;flex-direction:column;align-items:center;line-height:1}
+  .wordmark{
+    font-family:'Kaushan Script',cursive;font-weight:400;
+    font-size:clamp(60px,11vw,140px);line-height:.98;white-space:nowrap;
+    letter-spacing:-.01em;padding:0 .06em;
+  }
+  .wordmark .ca{color:var(--orange)}
+  .wordmark .trie{color:var(--chocolate)}
+  .wordmark.on-dark .trie{color:var(--cream)}
+  .wordmark.swap .ca{color:var(--chocolate)}
+  .wordmark.swap .trie{color:var(--orange)}
+
+  /* ---- hero ---- */
+  .hero{
+    display:grid;place-items:center;text-align:center;
+    background:linear-gradient(180deg,#FFFDF9,#FFF3E5);
+    border:1px solid var(--line);border-radius:28px;
+    padding:clamp(40px,7vw,80px) 24px;
+    box-shadow:0 34px 80px -60px rgba(59,36,21,.55);
+  }
+
+  /* ---- usage ---- */
+  .usage{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+  @media(max-width:760px){.usage{grid-template-columns:1fr}}
+  .panel{border-radius:20px;border:1px solid var(--line);overflow:hidden;background:#FFFDF9}
+  .navbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 24px;background:#FFFDF9}
+  .nav-logo{font-family:'Kaushan Script',cursive;font-size:30px;line-height:1;padding-bottom:6px}
+  .nav-links{display:flex;gap:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(59,36,21,.65)}
+  .nav-cta{background:var(--orange);color:#fff;border-radius:999px;padding:10px 18px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+  .footer-mock{background:linear-gradient(160deg,#432A19,#2A1810);padding:34px 24px;display:grid;place-items:center;gap:10px}
+  .footer-mock .wordmark{font-size:44px}
+  .footer-mock small{font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,247,236,.45)}
+
+  .marks{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end}
+  .mark{border-radius:26%;display:grid;place-items:center;background:var(--orange);color:var(--cream);font-family:'Kaushan Script',cursive;line-height:1}
+  .mark.lg{width:128px;height:128px;font-size:92px;padding-bottom:16px}
+  .mark.md{width:64px;height:64px;font-size:46px;padding-bottom:9px;border-radius:18px}
+  .mark.sm{width:32px;height:32px;font-size:24px;padding-bottom:5px;border-radius:9px}
+  .mark.reverse{background:var(--cream);color:var(--orange);border:1px solid var(--line)}
+  .mark-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(59,36,21,.4);text-align:center;margin-top:8px}
+  .mark-item{display:flex;flex-direction:column;align-items:center}
+
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .sw{display:flex;align-items:center;gap:12px;background:#FFFDF9;border:1px solid var(--line);border-radius:14px;padding:12px}
+  .dot{width:34px;height:34px;border-radius:10px;flex:0 0 auto;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+  .sw b{display:block;font-size:12px}
+  .sw span{font-size:11px;color:rgba(59,36,21,.5);font-variant-numeric:tabular-nums}
+  .notes{margin-top:40px;font-size:13px;line-height:1.75;color:rgba(59,36,21,.6)}
+  .notes b{color:var(--chocolate)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Catrie · Final Logo</p>
+  <h1>Brush-script wordmark — Kaushan Script</h1>
+  <p class="lede">One connected word: orange “Ca” into chocolate “trie”. No ornament, no tagline — just the name.</p>
+
+  <div class="rule"></div>
+
+  <div class="hero">
+    <div class="lockup">
+      <div class="wordmark">
+        <span class="ca">Ca</span><span class="trie">trie</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>In real usage</h2>
+  <div class="usage">
+    <div class="panel">
+      <div class="navbar">
+        <span class="nav-logo"><span style="color:var(--orange)">Ca</span><span style="color:var(--chocolate)">trie</span></span>
+        <div class="nav-links"><span>Cakes</span><span>About</span><span>Contact</span></div>
+        <span class="nav-cta">Book</span>
+      </div>
+      <div class="mark-label" style="background:#FFFDF9;padding:12px">Header — 30px</div>
+    </div>
+
+    <div class="panel">
+      <div class="footer-mock">
+        <span class="wordmark on-dark" style="font-size:44px"><span class="ca">Ca</span><span class="trie">trie</span></span>
+      </div>
+      <div class="mark-label" style="background:#FFFDF9;padding:12px">Footer — 44px</div>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>The mark</h2>
+  <div class="marks">
+    <div class="mark-item"><div class="mark lg">C</div><div class="mark-label">512 / social</div></div>
+    <div class="mark-item"><div class="mark md">C</div><div class="mark-label">64 / app</div></div>
+    <div class="mark-item"><div class="mark sm">C</div><div class="mark-label">32 / favicon</div></div>
+    <div class="mark-item"><div class="mark lg reverse">C</div><div class="mark-label">Reverse</div></div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>Palette</h2>
+  <div class="swatches">
+    <div class="sw"><span class="dot" style="background:#FFF7EC"></span><div><b>Cream</b><span>#FFF7EC</span></div></div>
+    <div class="sw"><span class="dot" style="background:#E86A17"></span><div><b>Orange</b><span>#E86A17</span></div></div>
+    <div class="sw"><span class="dot" style="background:#3B2415"></span><div><b>Chocolate</b><span>#3B2415</span></div></div>
+    <div class="sw"><span class="dot" style="background:#7C8A6B"></span><div><b>Sage</b><span>#7C8A6B</span></div></div>
+  </div>
+
+  <p class="notes">
+    <b>Delivered:</b> <code>catrie-logo.svg</code> (chocolate), <code>catrie-logo-dark.svg</code> (cream, for dark backgrounds), <code>catrie-mark.svg</code> and <code>catrie-mark-reverse.svg</code> (app / social / favicon). Wordmark only — no swash, no tagline.
+  </p>
+</div>
+</body>
+</html>

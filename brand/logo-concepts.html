@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Catrie — Logo Exploration</title>
+<link rel="stylesheet" href="./fonts/fonts.css" />
+<style>
+  :root{
+    --cream:#FFF7EC;
+    --cream-deep:#F6E9D6;
+    --orange:#E86A17;
+    --chocolate:#3B2415;
+    --chocolate-deep:#2A1810;
+    --sage:#7C8A6B;
+    --line:rgba(59,36,21,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:
+      radial-gradient(1200px 600px at 12% -10%, #FFFDF8 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, #FBEBD9 0%, transparent 55%),
+      var(--cream);
+    color:var(--chocolate);
+    font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:56px clamp(18px,5vw,72px) 96px;
+  }
+  .wrap{max-width:1160px;margin:0 auto}
+  .eyebrow{
+    font-size:11px;letter-spacing:.42em;text-transform:uppercase;
+    color:var(--sage);font-weight:600;margin:0 0 10px;
+  }
+  h1.page{
+    font-size:clamp(26px,3.4vw,38px);font-weight:500;letter-spacing:-.01em;
+    margin:0 0 8px;color:var(--chocolate-deep);
+  }
+  .lede{max-width:60ch;color:rgba(59,36,21,.72);font-size:15px;line-height:1.65;margin:0}
+  .rule{height:1px;background:var(--line);margin:36px 0}
+
+  /* ---------- wordmark ---------- */
+  .lockup{display:inline-block;position:relative;line-height:1;padding-bottom:.30em}
+  .wordmark{
+    display:inline-block;line-height:.95;white-space:nowrap;
+    font-family:'Dancing Script',cursive;font-weight:700;
+    font-size:clamp(64px,13vw,168px);
+    letter-spacing:-.005em;
+    padding-right:.08em;
+  }
+  .wordmark .ca{color:var(--orange);font-size:1.04em;vertical-align:-.01em}
+  .wordmark .trie{color:var(--chocolate)}
+  .wordmark.on-dark .trie{color:var(--cream)}
+  .wordmark.swap .ca{color:var(--chocolate)}
+  .wordmark.swap .trie{color:var(--orange)}
+  .swash{
+    position:absolute;left:1%;right:1%;bottom:-.01em;width:98%;height:.26em;
+    overflow:visible;pointer-events:none;
+  }
+  .tagline{
+    display:block;font-family:'Poppins',sans-serif;font-weight:500;
+    font-size:clamp(10px,1.1vw,13px);letter-spacing:.62em;text-indent:.62em;
+    text-transform:uppercase;color:var(--sage);margin-top:.9em;text-align:center;
+  }
+  .tagline.dark{color:rgba(255,247,236,.72)}
+
+  /* ---------- fonts ---------- */
+  .f-dancing{font-family:'Dancing Script',cursive;font-weight:700}
+  .f-kaushan{font-family:'Kaushan Script',cursive;font-weight:400}
+  .f-grand{font-family:'Grand Hotel',cursive;font-weight:400}
+  .f-yellow{font-family:'Yellowtail',cursive;font-weight:400}
+  .f-alex{font-family:'Alex Brush',cursive;font-weight:400}
+
+  /* ---------- hero ---------- */
+  .hero{
+    display:grid;place-items:center;text-align:center;
+    background:linear-gradient(180deg,#FFFDF8,#FFF4E7);
+    border:1px solid var(--line);border-radius:28px;
+    padding:clamp(32px,6vw,72px) clamp(18px,4vw,48px);
+    box-shadow:0 30px 70px -50px rgba(59,36,21,.55);
+  }
+
+  /* ---------- grid ---------- */
+  h2{
+    font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;
+    color:rgba(59,36,21,.55);margin:0 0 18px;
+  }
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{
+    background:#FFFDF9;border:1px solid var(--line);border-radius:20px;
+    padding:26px 20px 20px;text-align:center;position:relative;
+    transition:.25s ease;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 22px 40px -32px rgba(59,36,21,.5)}
+  .fontname{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+    color:rgba(59,36,21,.45);margin-bottom:16px;font-weight:500;
+  }
+  .badge{
+    font-size:9px;letter-spacing:.14em;padding:4px 8px;border-radius:999px;
+    background:rgba(232,106,23,.1);color:var(--orange);text-transform:uppercase;
+  }
+  .card .wordmark{font-size:clamp(44px,6vw,66px)}
+  .card .tagline{font-size:9px;letter-spacing:.5em;text-indent:.5em}
+
+  /* ---------- variants ---------- */
+  .variants{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .panel{border-radius:20px;padding:34px 22px;display:grid;place-items:center;text-align:center;border:1px solid var(--line)}
+  .panel.dark{background:chocolate;background:linear-gradient(160deg,#432A19,#2A1810);border-color:#432A19}
+  .panel.chip{background:#FFFDF9}
+  .panel .wordmark{font-size:clamp(38px,5.4vw,58px)}
+  .mark{
+    width:112px;height:112px;border-radius:30px;display:grid;place-items:center;
+    background:var(--orange);color:var(--cream);
+    font-family:'Dancing Script',cursive;font-weight:700;font-size:74px;line-height:1;
+    padding-bottom:14px;
+  }
+  .mark.on-cream{background:var(--cream);color:var(--orange);border:1px solid var(--line)}
+  .caption{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(59,36,21,.4);margin-top:22px;text-align:center}
+  .panel.dark .caption{color:rgba(255,247,236,.45)}
+
+  /* ---------- palette ---------- */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .sw{display:flex;align-items:center;gap:12px;background:#FFFDF9;border:1px solid var(--line);border-radius:14px;padding:12px}
+  .dot{width:34px;height:34px;border-radius:10px;flex:0 0 auto;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+  .sw b{display:block;font-size:12px;font-weight:600;letter-spacing:.02em}
+  .sw span{font-size:11px;color:rgba(59,36,21,.5);font-variant-numeric:tabular-nums}
+
+  footer.notes{margin-top:44px;font-size:13px;line-height:1.7;color:rgba(59,36,21,.6)}
+  footer.notes b{color:var(--chocolate)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Catrie · Brand Exploration</p>
+  <h1 class="page">Cursive wordmark, two-tone split</h1>
+  <p class="lede">One connected handwritten word — <b>Ca</b> and <b>trie</b> in separate colors, bold but light on its feet. Below: the primary lockup, four cursive options, and dark / mark variants.</p>
+
+  <div class="rule"></div>
+
+  <div class="hero">
+    <div class="lockup">
+      <div class="wordmark f-dancing"><span class="ca">Ca</span><span class="trie">trie</span></div>
+      <svg class="swash" viewBox="0 0 600 46" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M10 34 C 78 16, 190 9, 318 14 C 428 18, 508 32, 552 24 C 564 21, 575 16, 578 25"
+              fill="none" stroke="#7C8A6B" stroke-width="7" stroke-linecap="round"/>
+      </svg>
+      <span class="tagline">Cakery</span>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>Pick the handwriting</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="fontname">A · Dancing Script <span class="badge">recommended</span></span>
+      <div class="wordmark f-dancing"><span class="ca">Ca</span><span class="trie">trie</span></div>
+      <span class="tagline">Cakery</span>
+    </div>
+    <div class="card">
+      <span class="fontname">B · Kaushan Script</span>
+      <div class="wordmark f-kaushan"><span class="ca">Ca</span><span class="trie">trie</span></div>
+      <span class="tagline">Cakery</span>
+    </div>
+    <div class="card">
+      <span class="fontname">C · Grand Hotel</span>
+      <div class="wordmark f-grand"><span class="ca">Ca</span><span class="trie">trie</span></div>
+      <span class="tagline">Cakery</span>
+    </div>
+    <div class="card">
+      <span class="fontname">D · Yellowtail</span>
+      <div class="wordmark f-yellow"><span class="ca">Ca</span><span class="trie">trie</span></div>
+      <span class="tagline">Cakery</span>
+    </div>
+    <div class="card">
+      <span class="fontname">E · Alex Brush</span>
+      <div class="wordmark f-alex"><span class="ca">Ca</span><span class="trie">trie</span></div>
+      <span class="tagline">Cakery</span>
+    </div>
+  </div>
+  <p class="caption">A and C hold their weight best at small sizes · E is the most delicate</p>
+
+  <div class="rule"></div>
+
+  <h2>Variants</h2>
+  <div class="variants">
+    <div class="panel">
+      <div>
+        <div class="wordmark f-dancing swap"><span class="ca">Ca</span><span class="trie">trie</span></div>
+        <span class="tagline">Cakery</span>
+      </div>
+      <div class="caption">Color order swapped — chocolate first</div>
+    </div>
+
+    <div class="panel">
+      <div>
+        <div class="wordmark f-dancing"><span class="ca">Ca</span><span class="trie">trie</span></div>
+      </div>
+      <div class="caption">No swash · clean lockup</div>
+    </div>
+
+    <div class="panel dark">
+      <div>
+        <div class="wordmark f-dancing on-dark"><span class="ca">Ca</span><span class="trie">trie</span></div>
+        <span class="tagline dark">Cakery</span>
+      </div>
+      <div class="caption">On chocolate — footer / packaging</div>
+    </div>
+
+    <div class="panel chip">
+      <div>
+        <div class="mark">C</div>
+      </div>
+      <div class="caption">App / social mark — burnt orange</div>
+    </div>
+
+    <div class="panel chip">
+      <div>
+        <div class="mark on-cream">C</div>
+      </div>
+      <div class="caption">Reverse mark — cream on chocolate</div>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h2>Palette</h2>
+  <div class="swatches">
+    <div class="sw"><span class="dot" style="background:#FFF7EC"></span><div><b>Cream</b><span>#FFF7EC</span></div></div>
+    <div class="sw"><span class="dot" style="background:#E86A17"></span><div><b>Orange</b><span>#E86A17</span></div></div>
+    <div class="sw"><span class="dot" style="background:#3B2415"></span><div><b>Chocolate</b><span>#3B2415</span></div></div>
+    <div class="sw"><span class="dot" style="background:#7C8A6B"></span><div><b>Sage</b><span>#7C8A6B</span></div></div>
+  </div>
+
+  <footer class="notes">
+    <b>How the two-tone works:</b> the split is invisible in the letterforms — the baseline stays continuous — so it reads as one word, just lit differently at the start. Orange carries the "hook" of the name; chocolate keeps the long tail legible.<br>
+    <b>Next:</b> pick a handwriting (A–E), confirm the color order, and tell me if you want the sage swash kept. I'll then deliver the final SVG wordmark, favicon, and a React <code>&lt;Logo /&gt;</code> component.
+  </footer>
+
+</div>
+</body>
+</html>

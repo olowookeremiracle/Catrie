@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Catrie — Logo Files</title>
+<link rel="stylesheet" href="./fonts/fonts.css" />
+<style>
+  :root{--cream:#FFF7EC;--orange:#E86A17;--chocolate:#3B2415;--sage:#7C8A6B}
+  *{box-sizing:border-box}
+  body{margin:0;padding:48px clamp(18px,5vw,64px) 80px;background:var(--cream);color:var(--chocolate);font-family:'Poppins',system-ui,sans-serif}
+  .wrap{max-width:960px;margin:0 auto}
+  h1{font-size:26px;font-weight:500;margin:0 0 6px}
+  p.sub{margin:0 0 34px;color:rgba(59,36,21,.6);font-size:14px}
+  h2{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(59,36,21,.45);margin:38px 0 14px}
+  .row{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+  .box{background:#FFFDF9;border:1px solid rgba(59,36,21,.12);border-radius:18px;padding:26px;display:grid;place-items:center;flex:1 1 260px}
+  .box.dark{background:linear-gradient(160deg,#432A19,#2A1810);border-color:#432A19}
+  img{max-width:100%;height:auto;display:block}
+  .w-full img{width:340px}
+  .w-word img{width:290px}
+  .cap{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(59,36,21,.4);margin-top:14px;text-align:center}
+  .dark .cap{color:rgba(255,247,236,.45)}
+  .marks{display:flex;gap:18px;align-items:flex-end;flex-wrap:wrap}
+  .m-item{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .m-item img{border-radius:26%}
+  .m512{width:120px}.m64{width:64px}.m32{width:32px}
+  code{background:rgba(59,36,21,.06);padding:2px 6px;border-radius:5px;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Catrie — exported logo files</h1>
+  <p class="sub">Self-contained SVGs (fonts embedded) — rendered here as <code>&lt;img&gt;</code> to prove they work without the page font.</p>
+
+  <h2>Logo</h2>
+  <div class="row">
+    <div class="box w-full"><div><img src="catrie-logo.svg" alt="Catrie logo" /><div class="cap">catrie-logo.svg</div></div></div>
+    <div class="box dark w-full"><div><img src="catrie-logo-dark.svg" alt="Catrie logo dark" /><div class="cap">catrie-logo-dark.svg</div></div></div>
+  </div>
+
+  <h2>Mark</h2>
+  <div class="marks">
+    <div class="m-item"><img class="m512" src="catrie-mark.svg" alt="Catrie mark" /><div class="cap">512</div></div>
+    <div class="m-item"><img class="m64" src="catrie-mark.svg" alt="" /><div class="cap">64</div></div>
+    <div class="m-item"><img class="m32" src="catrie-mark.svg" alt="" /><div class="cap">32</div></div>
+    <div class="m-item"><img class="m512" src="catrie-mark-reverse.svg" alt="Catrie mark reverse" /><div class="cap">reverse</div></div>
+  </div>
+</div>
+</body>
+</html>

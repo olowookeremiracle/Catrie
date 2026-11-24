@@ -88,7 +88,7 @@ export function CakeGallery({ cakeKey, name }: CakeGalleryProps) {
         </span>
       </button>
 
-      <div className="mt-4 flex flex-wrap gap-3" role="list" aria-label={`${name} photos`}>
+      <div className="mt-4 flex flex-wrap gap-2" role="list" aria-label={`${name} photos`}>
         {photos.map((src, i) => (
           <button
             key={src}
@@ -97,7 +97,7 @@ export function CakeGallery({ cakeKey, name }: CakeGalleryProps) {
             aria-label={`Show photo ${i + 1} of ${total}`}
             aria-current={i === safeActive}
             className={cn(
-              'group relative w-[72px] shrink-0 cursor-pointer overflow-hidden rounded-md border-2 transition-all duration-300',
+              'group relative w-[60px] shrink-0 cursor-pointer overflow-hidden rounded-md border-2 transition-all duration-300 sm:w-[72px]',
               i === safeActive
                 ? 'border-orange shadow-[0_10px_20px_-12px_rgba(232,106,23,0.9)]'
                 : 'border-transparent opacity-65 hover:opacity-100',

@@ -41,13 +41,13 @@ export function FilterBar({ showCategories = true }: FilterBarProps) {
   return (
     <div className="space-y-5">
       {showCategories && (
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="-mx-5 flex items-center gap-2 overflow-x-auto px-5 sm:mx-0 sm:px-0">
           <button
             type="button"
             onClick={() => setCategory(undefined)}
             aria-pressed={!activeCategory}
             className={cn(
-              'rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200',
+              'shrink-0 rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200',
               activeCategory
                 ? 'border-line text-ink-muted hover:-translate-y-0.5 hover:border-chocolate/30 hover:text-chocolate'
                 : 'border-chocolate bg-chocolate text-cream shadow-[0_8px_18px_-10px_rgba(59,36,21,0.6)] hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-10px_rgba(59,36,21,0.7)]',
@@ -62,7 +62,7 @@ export function FilterBar({ showCategories = true }: FilterBarProps) {
               onClick={() => setCategory(category.slug)}
               aria-pressed={activeCategory === category.slug}
               className={cn(
-                'rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200',
+                'shrink-0 rounded-full border px-4 py-2 text-[13px] font-medium transition-all duration-200',
                 activeCategory === category.slug
                   ? 'border-chocolate bg-chocolate text-cream shadow-[0_8px_18px_-10px_rgba(59,36,21,0.6)]'
                   : 'border-line text-ink-muted hover:-translate-y-0.5 hover:border-chocolate/30 hover:text-chocolate',

@@ -146,11 +146,11 @@ export function CakeDetail() {
                   </div>
                 </fieldset>
 
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-8 flex gap-3">
                   <button
                     type="button"
                     onClick={() => openBooking(cake.slug)}
-                    className="btn-primary"
+                    className="inline-flex h-11 flex-1 items-center justify-center rounded-full bg-orange px-4 text-[13px] font-medium text-cream shadow-[0_10px_22px_-12px_rgba(232,106,23,0.75)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-deep hover:shadow-[0_16px_28px_-12px_rgba(232,106,23,0.85)] active:translate-y-0 active:scale-[0.97] md:btn-primary md:h-12 md:flex-none md:px-6 md:text-[14px]"
                   >
                     Book this cake
                   </button>
@@ -160,10 +160,10 @@ export function CakeDetail() {
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn-secondary"
+                    className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full border border-chocolate/25 px-4 text-[13px] font-medium text-chocolate transition-all duration-200 hover:-translate-y-0.5 hover:border-chocolate hover:bg-chocolate hover:text-cream hover:shadow-[0_16px_30px_-18px_rgba(59,36,21,0.7)] active:translate-y-0 active:scale-[0.97] md:btn-secondary md:h-12 md:flex-none md:px-6 md:text-[14px]"
                   >
                     <WhatsAppIcon className="size-4" />
-                    Ask on WhatsApp
+                    <span>Ask on WhatsApp</span>
                   </a>
                 </div>
 

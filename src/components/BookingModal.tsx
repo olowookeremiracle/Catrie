@@ -227,7 +227,7 @@ export function BookingModal({ open, onClose, prefillCakeSlug }: BookingModalPro
 
                 <div className="grid grid-cols-2 gap-3">
                   {field(
-                    'Phone / WhatsApp',
+                    'Phone',
                     'bk-phone',
                     <input
                       id="bk-phone"

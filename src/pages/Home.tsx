@@ -68,14 +68,14 @@ export function Home() {
       <section className="pb-16 pt-[132px] md:pb-24 md:pt-[168px]">
         <div className="container-content grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <div key={slide.key} className="hero-swap">
-            <p className="label">Cakery · Osun State</p>
+            <p className="label">Small-batch cakery</p>
             <h1 className="mt-6 text-[clamp(42px,6.6vw,92px)] font-light leading-[0.98] tracking-[-0.03em]">
               Cakes for the days you&rsquo;ll{' '}
               <em className="italic text-orange">remember</em>.
             </h1>
             <p className="mt-7 max-w-[46ch] text-[16px] leading-[1.7] text-ink-muted md:text-[17px]">
               {slide.caption} Celebration, wedding, cupcake and custom cakes —
-              baked to order in small batches, in Osun State.
+              baked to order in small batches.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
               <Link to="/cakes" className="btn-primary">
